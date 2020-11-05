@@ -12,6 +12,11 @@ TARGET = endless-sky-editor
 TEMPLATE = app
 CONFIG += c++11
 
+#---
+# Nov 4, 2020 KDW - added to avoid GCC issue with missing stddef.h
+INCLUDEPATH += /usr/lib/gcc/x86_64-linux-gnu/9/include/
+#---
+
 target.path = /usr/games/
 INSTALLS += target
 
