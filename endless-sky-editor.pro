@@ -41,6 +41,7 @@ SOURCES += main.cpp\
     DataFile.cpp\
     DataNode.cpp\
     DataWriter.cpp\
+    HarvestingView.cpp \
     MainWindow.cpp\
     Planet.cpp\
     StellarObject.cpp\
@@ -59,6 +60,7 @@ SOURCES += main.cpp\
 HEADERS  += DataFile.h\
     DataNode.h\
     DataWriter.h\
+    HarvestingView.h \
     MainWindow.h\
     Planet.h\
     StellarObject.h\

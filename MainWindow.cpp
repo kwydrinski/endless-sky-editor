@@ -17,6 +17,7 @@ PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 #include "Map.h"
 #include "PlanetView.h"
 #include "SystemView.h"
+#include "HarvestingView.h"
 
 #include <QAction>
 #include <QDragEnterEvent>
@@ -238,9 +239,14 @@ void MainWindow::CreateWidgets()
 
     layout->addWidget(detailView);
 
+    // create the harvesting view
+    harvestingView = new HarvestingView(map, box);
+
+    // add the views as tabs
     tabs->addTab(galaxyView, "Galaxy");
     tabs->addTab(systemView, "System");
     tabs->addTab(planetView, "Planet");
+    tabs->addTab(harvestingView, "Harvesting");
     layout->addWidget(tabs);
 
     connect(tabs, SIGNAL(currentChanged(int)), this, SLOT(TabChanged(int)));

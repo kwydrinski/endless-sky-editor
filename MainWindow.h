@@ -20,6 +20,7 @@ class DetailView;
 class GalaxyView;
 class SystemView;
 class PlanetView;
+class HarvestingView;
 
 class QDragEnterEvent;
 class QDropEvent;
@@ -67,6 +68,7 @@ private:
     GalaxyView *galaxyView = nullptr;
     SystemView *systemView = nullptr;
     PlanetView *planetView = nullptr;
+    HarvestingView *harvestingView = nullptr;
 
     QMenu *galaxyMenu = nullptr;
     QMenu *systemMenu = nullptr;
