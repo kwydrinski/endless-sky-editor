@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui charts
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -13,8 +13,9 @@ TEMPLATE = app
 CONFIG += c++11
 
 #---
-# Nov 4, 2020 KDW - added to avoid GCC issue with missing stddef.h
-INCLUDEPATH += /usr/lib/gcc/x86_64-linux-gnu/9/include/
+# Nov 9, 2020 KDW - added to avoid clang issue with missing stddef.h
+#INCLUDEPATH += /usr/lib/gcc/x86_64-linux-gnu/9/include/
+INCLUDEPATH += /usr/lib/llvm-10/lib/clang/10.0.0/include/
 #---
 
 target.path = /usr/games/
@@ -41,8 +42,10 @@ SOURCES += main.cpp\
     DataFile.cpp\
     DataNode.cpp\
     DataWriter.cpp\
+    Harvesting.cpp \
     HarvestingView.cpp \
     MainWindow.cpp\
+    Minable.cpp \
     Planet.cpp\
     StellarObject.cpp\
     System.cpp \
@@ -60,8 +63,10 @@ SOURCES += main.cpp\
 HEADERS  += DataFile.h\
     DataNode.h\
     DataWriter.h\
+    Harvesting.h \
     HarvestingView.h \
     MainWindow.h\
+    Minable.h \
     Planet.h\
     StellarObject.h\
     System.h \

@@ -41,6 +41,8 @@ MainWindow::MainWindow(Map &map, QWidget *parent)
 {
     CreateWidgets();
     CreateMenus();
+    connect(this, SIGNAL(mapFileOpened()),
+            this->harvestingView, SLOT(mapDataLoaded()));
     setAcceptDrops(true);
 
     resize(1200, 900);
@@ -115,7 +117,10 @@ void MainWindow::Open()
     QString dir = map.DataDirectory();
     QString path = QFileDialog::getOpenFileName(this, "Open map file", dir);
     if(!path.isEmpty())
+    {
         DoOpen(path);
+        emit mapFileOpened();
+    }
 }
 
 

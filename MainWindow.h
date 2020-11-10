@@ -40,6 +40,9 @@ public:
 
     void DoOpen(const QString &path);
 
+signals:
+    void mapFileOpened();
+
 public slots:
     void NewMap();
     void Open();
